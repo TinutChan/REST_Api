@@ -1,3 +1,4 @@
+import 'package:app2022/modules/recommend_property/controller/recommend_property_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   final productsController = Get.put(ProductsController());
+  final recommendProductsController = Get.put(RecommendPropertyController());
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,14 @@ class HomeScreen extends StatelessWidget {
           children: [
             Center(
               child: IconButton(
-                onPressed: () async {
-                  await productsController.getProducts();
-                },
+                onPressed: productsController.getProducts,
                 icon: const Icon(Icons.refresh),
+              ),
+            ),
+            Center(
+              child: IconButton(
+                onPressed: recommendProductsController.getRecommendProperty,
+                icon: const Icon(Icons.download),
               ),
             ),
           ],

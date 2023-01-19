@@ -18,7 +18,8 @@ _$_ProductsModel _$$_ProductsModelFromJson(Map<String, dynamic> json) =>
       brand: json['brand'] as String?,
       category: json['category'] as String?,
       thumbnail: json['thumbnail'] as String?,
-      images: json['images'] as String?,
+      images:
+          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$_ProductsModelToJson(_$_ProductsModel instance) =>

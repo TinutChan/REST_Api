@@ -16,7 +16,7 @@ class ProductsModel with _$ProductsModel {
     String? brand,
     String? category,
     String? thumbnail,
-    String? images,
+    List<String>? images,
   }) = _ProductsModel;
 
   factory ProductsModel.fromJson(Map<String, dynamic> json) =>

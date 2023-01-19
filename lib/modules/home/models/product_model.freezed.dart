@@ -30,7 +30,7 @@ mixin _$ProductsModel {
   String? get brand => throw _privateConstructorUsedError;
   String? get category => throw _privateConstructorUsedError;
   String? get thumbnail => throw _privateConstructorUsedError;
-  String? get images => throw _privateConstructorUsedError;
+  List<String>? get images => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -55,7 +55,7 @@ abstract class $ProductsModelCopyWith<$Res> {
       String? brand,
       String? category,
       String? thumbnail,
-      String? images});
+      List<String>? images});
 }
 
 /// @nodoc
@@ -127,7 +127,7 @@ class _$ProductsModelCopyWithImpl<$Res, $Val extends ProductsModel>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
     ) as $Val);
   }
 }
@@ -151,7 +151,7 @@ abstract class _$$_ProductsModelCopyWith<$Res>
       String? brand,
       String? category,
       String? thumbnail,
-      String? images});
+      List<String>? images});
 }
 
 /// @nodoc
@@ -219,9 +219,9 @@ class __$$_ProductsModelCopyWithImpl<$Res>
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
       images: freezed == images
-          ? _value.images
+          ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>?,
     ));
   }
 }
@@ -240,7 +240,8 @@ class _$_ProductsModel implements _ProductsModel {
       this.brand,
       this.category,
       this.thumbnail,
-      this.images});
+      final List<String>? images})
+      : _images = images;
 
   factory _$_ProductsModel.fromJson(Map<String, dynamic> json) =>
       _$$_ProductsModelFromJson(json);
@@ -265,8 +266,15 @@ class _$_ProductsModel implements _ProductsModel {
   final String? category;
   @override
   final String? thumbnail;
+  final List<String>? _images;
   @override
-  final String? images;
+  List<String>? get images {
+    final value = _images;
+    if (value == null) return null;
+    if (_images is EqualUnmodifiableListView) return _images;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -292,13 +300,24 @@ class _$_ProductsModel implements _ProductsModel {
                 other.category == category) &&
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
-            (identical(other.images, images) || other.images == images));
+            const DeepCollectionEquality().equals(other._images, _images));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, description, price,
-      discountPercentage, rating, stock, brand, category, thumbnail, images);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      description,
+      price,
+      discountPercentage,
+      rating,
+      stock,
+      brand,
+      category,
+      thumbnail,
+      const DeepCollectionEquality().hash(_images));
 
   @JsonKey(ignore: true)
   @override
@@ -326,7 +345,7 @@ abstract class _ProductsModel implements ProductsModel {
       final String? brand,
       final String? category,
       final String? thumbnail,
-      final String? images}) = _$_ProductsModel;
+      final List<String>? images}) = _$_ProductsModel;
 
   factory _ProductsModel.fromJson(Map<String, dynamic> json) =
       _$_ProductsModel.fromJson;
@@ -352,7 +371,7 @@ abstract class _ProductsModel implements ProductsModel {
   @override
   String? get thumbnail;
   @override
-  String? get images;
+  List<String>? get images;
   @override
   @JsonKey(ignore: true)
   _$$_ProductsModelCopyWith<_$_ProductsModel> get copyWith =>
