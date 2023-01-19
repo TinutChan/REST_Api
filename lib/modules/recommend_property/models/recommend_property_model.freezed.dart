@@ -180,47 +180,47 @@ class __$$_RecommendPropertyCopyWithImpl<$Res>
     Object? type = freezed,
   }) {
     return _then(_$_RecommendProperty(
-      freezed == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      freezed == bath
+      bath: freezed == bath
           ? _value.bath
           : bath // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == carParking
+      carParking: freezed == carParking
           ? _value.carParking
           : carParking // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == bed
+      bed: freezed == bed
           ? _value.bed
           : bed // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == address
+      address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == shortAddress
+      shortAddress: freezed == shortAddress
           ? _value.shortAddress
           : shortAddress // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == code
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == name
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == profile
+      profile: freezed == profile
           ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      freezed == price
+      price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as String?,
-      freezed == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -232,7 +232,7 @@ class __$$_RecommendPropertyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_RecommendProperty implements _RecommendProperty {
   _$_RecommendProperty(
-      this.id,
+      {this.id,
       this.bath,
       @JsonKey(name: 'car_parking') this.carParking,
       this.bed,
@@ -242,7 +242,7 @@ class _$_RecommendProperty implements _RecommendProperty {
       this.name,
       final List<String>? profile,
       this.price,
-      this.type)
+      this.type})
       : _profile = profile;
 
   factory _$_RecommendProperty.fromJson(Map<String, dynamic> json) =>
@@ -339,7 +339,7 @@ class _$_RecommendProperty implements _RecommendProperty {
 
 abstract class _RecommendProperty implements RecommendProperty {
   factory _RecommendProperty(
-      final int? id,
+      {final int? id,
       final String? bath,
       @JsonKey(name: 'car_parking') final String? carParking,
       final String? bed,
@@ -349,7 +349,7 @@ abstract class _RecommendProperty implements RecommendProperty {
       final String? name,
       final List<String>? profile,
       final String? price,
-      final String? type) = _$_RecommendProperty;
+      final String? type}) = _$_RecommendProperty;
 
   factory _RecommendProperty.fromJson(Map<String, dynamic> json) =
       _$_RecommendProperty.fromJson;

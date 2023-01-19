@@ -5,7 +5,7 @@ part 'recommend_property_model.g.dart';
 
 @freezed
 class RecommendProperty with _$RecommendProperty {
-  factory RecommendProperty(
+  factory RecommendProperty({
     int? id,
     String? bath,
     @JsonKey(name: 'car_parking') String? carParking,
@@ -17,7 +17,7 @@ class RecommendProperty with _$RecommendProperty {
     List<String>? profile,
     String? price,
     String? type,
-  ) = _RecommendProperty;
+  }) = _RecommendProperty;
 
   factory RecommendProperty.fromJson(Map<String, dynamic> json) =>
       _$RecommendPropertyFromJson(json);

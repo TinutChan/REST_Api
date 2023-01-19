@@ -15,18 +15,42 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
-              child: IconButton(
-                onPressed: productsController.getProducts,
-                icon: const Icon(Icons.refresh),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Recommend Property',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5!
+                    .merge(const TextStyle(color: Colors.black)),
               ),
             ),
             Center(
               child: IconButton(
                 onPressed: recommendProductsController.getRecommendProperty,
-                icon: const Icon(Icons.download),
+                icon: const Icon(Icons.refresh),
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount:
+                    recommendProductsController.listRecommendproperties.length,
+                itemBuilder: ((context, index) {
+                  return Column(
+                    children: recommendProductsController
+                        .listRecommendproperties
+                        .map((element) {
+                      return Container(
+                        width: double.infinity,
+                        height: 200,
+                        color: Colors.red,
+                      );
+                    }).toList(),
+                  );
+                }),
               ),
             ),
           ],

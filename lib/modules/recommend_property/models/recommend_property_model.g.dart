@@ -8,17 +8,18 @@ part of 'recommend_property_model.dart';
 
 _$_RecommendProperty _$$_RecommendPropertyFromJson(Map<String, dynamic> json) =>
     _$_RecommendProperty(
-      json['id'] as int?,
-      json['bath'] as String?,
-      json['car_parking'] as String?,
-      json['bed'] as String?,
-      json['address'] as String?,
-      json['short_address'] as String?,
-      json['code'] as String?,
-      json['name'] as String?,
-      (json['profile'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      json['price'] as String?,
-      json['type'] as String?,
+      id: json['id'] as int?,
+      bath: json['bath'] as String?,
+      carParking: json['car_parking'] as String?,
+      bed: json['bed'] as String?,
+      address: json['address'] as String?,
+      shortAddress: json['short_address'] as String?,
+      code: json['code'] as String?,
+      name: json['name'] as String?,
+      profile:
+          (json['profile'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      price: json['price'] as String?,
+      type: json['type'] as String?,
     );
 
 Map<String, dynamic> _$$_RecommendPropertyToJson(
