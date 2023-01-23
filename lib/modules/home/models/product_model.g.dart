@@ -6,33 +6,28 @@ part of 'product_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ProductsModel _$$_ProductsModelFromJson(Map<String, dynamic> json) =>
-    _$_ProductsModel(
+_$_PropertyCategory _$$_PropertyCategoryFromJson(Map<String, dynamic> json) =>
+    _$_PropertyCategory(
       id: json['id'] as int?,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      price: (json['price'] as num?)?.toDouble(),
-      discountPercentage: (json['discountPercentage'] as num?)?.toDouble(),
-      rating: (json['rating'] as num?)?.toDouble(),
-      stock: json['stock'] as int?,
-      brand: json['brand'] as String?,
-      category: json['category'] as String?,
-      thumbnail: json['thumbnail'] as String?,
-      images:
-          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      key: json['key'] as String?,
+      type: json['type'] as String?,
+      label: json['label'] as String?,
+      route: json['route'] as String?,
+      icon2: json['icon2'] as String?,
+      icon: json['icon'] as String?,
+      activeIcon: json['active_icon'] as String?,
+      active: json['active'] as bool?,
     );
 
-Map<String, dynamic> _$$_ProductsModelToJson(_$_ProductsModel instance) =>
+Map<String, dynamic> _$$_PropertyCategoryToJson(_$_PropertyCategory instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'title': instance.title,
-      'description': instance.description,
-      'price': instance.price,
-      'discountPercentage': instance.discountPercentage,
-      'rating': instance.rating,
-      'stock': instance.stock,
-      'brand': instance.brand,
-      'category': instance.category,
-      'thumbnail': instance.thumbnail,
-      'images': instance.images,
+      'key': instance.key,
+      'type': instance.type,
+      'label': instance.label,
+      'route': instance.route,
+      'icon2': instance.icon2,
+      'icon': instance.icon,
+      'active_icon': instance.activeIcon,
+      'active': instance.active,
     };

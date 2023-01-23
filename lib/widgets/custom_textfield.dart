@@ -7,7 +7,7 @@ class CustomTextFiled extends StatelessWidget {
     this.icons,
     this.hinttext,
     this.padding,
-    this.function,
+    required this.function,
     this.inputKeyboard,
     this.userController,
     required this.obscureText,
@@ -30,7 +30,7 @@ class CustomTextFiled extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
       decoration: BoxDecoration(
           border: Border.all(width: 1, color: Colors.black),
-          color: const Color(0xffF2F2F2),
+          color: const Color.fromRGBO(242, 242, 242, 1),
           borderRadius: BorderRadius.circular(8.0)),
       child: TextField(
         obscureText: obscureText!,

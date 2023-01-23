@@ -14,54 +14,51 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ProductsModel _$ProductsModelFromJson(Map<String, dynamic> json) {
-  return _ProductsModel.fromJson(json);
+PropertyCategory _$PropertyCategoryFromJson(Map<String, dynamic> json) {
+  return _PropertyCategory.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ProductsModel {
+mixin _$PropertyCategory {
   int? get id => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  double? get price => throw _privateConstructorUsedError;
-  double? get discountPercentage => throw _privateConstructorUsedError;
-  double? get rating => throw _privateConstructorUsedError;
-  int? get stock => throw _privateConstructorUsedError;
-  String? get brand => throw _privateConstructorUsedError;
-  String? get category => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
-  List<String>? get images => throw _privateConstructorUsedError;
+  String? get key => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
+  String? get label => throw _privateConstructorUsedError;
+  String? get route => throw _privateConstructorUsedError;
+  String? get icon2 => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  @JsonKey(name: 'active_icon')
+  String? get activeIcon => throw _privateConstructorUsedError;
+  bool? get active => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProductsModelCopyWith<ProductsModel> get copyWith =>
+  $PropertyCategoryCopyWith<PropertyCategory> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ProductsModelCopyWith<$Res> {
-  factory $ProductsModelCopyWith(
-          ProductsModel value, $Res Function(ProductsModel) then) =
-      _$ProductsModelCopyWithImpl<$Res, ProductsModel>;
+abstract class $PropertyCategoryCopyWith<$Res> {
+  factory $PropertyCategoryCopyWith(
+          PropertyCategory value, $Res Function(PropertyCategory) then) =
+      _$PropertyCategoryCopyWithImpl<$Res, PropertyCategory>;
   @useResult
   $Res call(
       {int? id,
-      String? title,
-      String? description,
-      double? price,
-      double? discountPercentage,
-      double? rating,
-      int? stock,
-      String? brand,
-      String? category,
-      String? thumbnail,
-      List<String>? images});
+      String? key,
+      String? type,
+      String? label,
+      String? route,
+      String? icon2,
+      String? icon,
+      @JsonKey(name: 'active_icon') String? activeIcon,
+      bool? active});
 }
 
 /// @nodoc
-class _$ProductsModelCopyWithImpl<$Res, $Val extends ProductsModel>
-    implements $ProductsModelCopyWith<$Res> {
-  _$ProductsModelCopyWithImpl(this._value, this._then);
+class _$PropertyCategoryCopyWithImpl<$Res, $Val extends PropertyCategory>
+    implements $PropertyCategoryCopyWith<$Res> {
+  _$PropertyCategoryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -72,308 +69,252 @@ class _$ProductsModelCopyWithImpl<$Res, $Val extends ProductsModel>
   @override
   $Res call({
     Object? id = freezed,
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? price = freezed,
-    Object? discountPercentage = freezed,
-    Object? rating = freezed,
-    Object? stock = freezed,
-    Object? brand = freezed,
-    Object? category = freezed,
-    Object? thumbnail = freezed,
-    Object? images = freezed,
+    Object? key = freezed,
+    Object? type = freezed,
+    Object? label = freezed,
+    Object? route = freezed,
+    Object? icon2 = freezed,
+    Object? icon = freezed,
+    Object? activeIcon = freezed,
+    Object? active = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as double?,
-      discountPercentage: freezed == discountPercentage
-          ? _value.discountPercentage
-          : discountPercentage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      rating: freezed == rating
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
-      stock: freezed == stock
-          ? _value.stock
-          : stock // ignore: cast_nullable_to_non_nullable
-              as int?,
-      brand: freezed == brand
-          ? _value.brand
-          : brand // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
+      route: freezed == route
+          ? _value.route
+          : route // ignore: cast_nullable_to_non_nullable
               as String?,
-      thumbnail: freezed == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
+      icon2: freezed == icon2
+          ? _value.icon2
+          : icon2 // ignore: cast_nullable_to_non_nullable
               as String?,
-      images: freezed == images
-          ? _value.images
-          : images // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      activeIcon: freezed == activeIcon
+          ? _value.activeIcon
+          : activeIcon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      active: freezed == active
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_ProductsModelCopyWith<$Res>
-    implements $ProductsModelCopyWith<$Res> {
-  factory _$$_ProductsModelCopyWith(
-          _$_ProductsModel value, $Res Function(_$_ProductsModel) then) =
-      __$$_ProductsModelCopyWithImpl<$Res>;
+abstract class _$$_PropertyCategoryCopyWith<$Res>
+    implements $PropertyCategoryCopyWith<$Res> {
+  factory _$$_PropertyCategoryCopyWith(
+          _$_PropertyCategory value, $Res Function(_$_PropertyCategory) then) =
+      __$$_PropertyCategoryCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {int? id,
-      String? title,
-      String? description,
-      double? price,
-      double? discountPercentage,
-      double? rating,
-      int? stock,
-      String? brand,
-      String? category,
-      String? thumbnail,
-      List<String>? images});
+      String? key,
+      String? type,
+      String? label,
+      String? route,
+      String? icon2,
+      String? icon,
+      @JsonKey(name: 'active_icon') String? activeIcon,
+      bool? active});
 }
 
 /// @nodoc
-class __$$_ProductsModelCopyWithImpl<$Res>
-    extends _$ProductsModelCopyWithImpl<$Res, _$_ProductsModel>
-    implements _$$_ProductsModelCopyWith<$Res> {
-  __$$_ProductsModelCopyWithImpl(
-      _$_ProductsModel _value, $Res Function(_$_ProductsModel) _then)
+class __$$_PropertyCategoryCopyWithImpl<$Res>
+    extends _$PropertyCategoryCopyWithImpl<$Res, _$_PropertyCategory>
+    implements _$$_PropertyCategoryCopyWith<$Res> {
+  __$$_PropertyCategoryCopyWithImpl(
+      _$_PropertyCategory _value, $Res Function(_$_PropertyCategory) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? price = freezed,
-    Object? discountPercentage = freezed,
-    Object? rating = freezed,
-    Object? stock = freezed,
-    Object? brand = freezed,
-    Object? category = freezed,
-    Object? thumbnail = freezed,
-    Object? images = freezed,
+    Object? key = freezed,
+    Object? type = freezed,
+    Object? label = freezed,
+    Object? route = freezed,
+    Object? icon2 = freezed,
+    Object? icon = freezed,
+    Object? activeIcon = freezed,
+    Object? active = freezed,
   }) {
-    return _then(_$_ProductsModel(
+    return _then(_$_PropertyCategory(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as double?,
-      discountPercentage: freezed == discountPercentage
-          ? _value.discountPercentage
-          : discountPercentage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      rating: freezed == rating
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
-      stock: freezed == stock
-          ? _value.stock
-          : stock // ignore: cast_nullable_to_non_nullable
-              as int?,
-      brand: freezed == brand
-          ? _value.brand
-          : brand // ignore: cast_nullable_to_non_nullable
+      label: freezed == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
               as String?,
-      category: freezed == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
+      route: freezed == route
+          ? _value.route
+          : route // ignore: cast_nullable_to_non_nullable
               as String?,
-      thumbnail: freezed == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
+      icon2: freezed == icon2
+          ? _value.icon2
+          : icon2 // ignore: cast_nullable_to_non_nullable
               as String?,
-      images: freezed == images
-          ? _value._images
-          : images // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      activeIcon: freezed == activeIcon
+          ? _value.activeIcon
+          : activeIcon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      active: freezed == active
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProductsModel implements _ProductsModel {
-  _$_ProductsModel(
+class _$_PropertyCategory implements _PropertyCategory {
+  _$_PropertyCategory(
       {this.id,
-      this.title,
-      this.description,
-      this.price,
-      this.discountPercentage,
-      this.rating,
-      this.stock,
-      this.brand,
-      this.category,
-      this.thumbnail,
-      final List<String>? images})
-      : _images = images;
+      this.key,
+      this.type,
+      this.label,
+      this.route,
+      this.icon2,
+      this.icon,
+      @JsonKey(name: 'active_icon') this.activeIcon,
+      this.active});
 
-  factory _$_ProductsModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ProductsModelFromJson(json);
+  factory _$_PropertyCategory.fromJson(Map<String, dynamic> json) =>
+      _$$_PropertyCategoryFromJson(json);
 
   @override
   final int? id;
   @override
-  final String? title;
+  final String? key;
   @override
-  final String? description;
+  final String? type;
   @override
-  final double? price;
+  final String? label;
   @override
-  final double? discountPercentage;
+  final String? route;
   @override
-  final double? rating;
+  final String? icon2;
   @override
-  final int? stock;
+  final String? icon;
   @override
-  final String? brand;
+  @JsonKey(name: 'active_icon')
+  final String? activeIcon;
   @override
-  final String? category;
-  @override
-  final String? thumbnail;
-  final List<String>? _images;
-  @override
-  List<String>? get images {
-    final value = _images;
-    if (value == null) return null;
-    if (_images is EqualUnmodifiableListView) return _images;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final bool? active;
 
   @override
   String toString() {
-    return 'ProductsModel(id: $id, title: $title, description: $description, price: $price, discountPercentage: $discountPercentage, rating: $rating, stock: $stock, brand: $brand, category: $category, thumbnail: $thumbnail, images: $images)';
+    return 'PropertyCategory(id: $id, key: $key, type: $type, label: $label, route: $route, icon2: $icon2, icon: $icon, activeIcon: $activeIcon, active: $active)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProductsModel &&
+            other is _$_PropertyCategory &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.price, price) || other.price == price) &&
-            (identical(other.discountPercentage, discountPercentage) ||
-                other.discountPercentage == discountPercentage) &&
-            (identical(other.rating, rating) || other.rating == rating) &&
-            (identical(other.stock, stock) || other.stock == stock) &&
-            (identical(other.brand, brand) || other.brand == brand) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
-            (identical(other.thumbnail, thumbnail) ||
-                other.thumbnail == thumbnail) &&
-            const DeepCollectionEquality().equals(other._images, _images));
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.route, route) || other.route == route) &&
+            (identical(other.icon2, icon2) || other.icon2 == icon2) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.activeIcon, activeIcon) ||
+                other.activeIcon == activeIcon) &&
+            (identical(other.active, active) || other.active == active));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      title,
-      description,
-      price,
-      discountPercentage,
-      rating,
-      stock,
-      brand,
-      category,
-      thumbnail,
-      const DeepCollectionEquality().hash(_images));
+  int get hashCode => Object.hash(runtimeType, id, key, type, label, route,
+      icon2, icon, activeIcon, active);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProductsModelCopyWith<_$_ProductsModel> get copyWith =>
-      __$$_ProductsModelCopyWithImpl<_$_ProductsModel>(this, _$identity);
+  _$$_PropertyCategoryCopyWith<_$_PropertyCategory> get copyWith =>
+      __$$_PropertyCategoryCopyWithImpl<_$_PropertyCategory>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProductsModelToJson(
+    return _$$_PropertyCategoryToJson(
       this,
     );
   }
 }
 
-abstract class _ProductsModel implements ProductsModel {
-  factory _ProductsModel(
+abstract class _PropertyCategory implements PropertyCategory {
+  factory _PropertyCategory(
       {final int? id,
-      final String? title,
-      final String? description,
-      final double? price,
-      final double? discountPercentage,
-      final double? rating,
-      final int? stock,
-      final String? brand,
-      final String? category,
-      final String? thumbnail,
-      final List<String>? images}) = _$_ProductsModel;
+      final String? key,
+      final String? type,
+      final String? label,
+      final String? route,
+      final String? icon2,
+      final String? icon,
+      @JsonKey(name: 'active_icon') final String? activeIcon,
+      final bool? active}) = _$_PropertyCategory;
 
-  factory _ProductsModel.fromJson(Map<String, dynamic> json) =
-      _$_ProductsModel.fromJson;
+  factory _PropertyCategory.fromJson(Map<String, dynamic> json) =
+      _$_PropertyCategory.fromJson;
 
   @override
   int? get id;
   @override
-  String? get title;
+  String? get key;
   @override
-  String? get description;
+  String? get type;
   @override
-  double? get price;
+  String? get label;
   @override
-  double? get discountPercentage;
+  String? get route;
   @override
-  double? get rating;
+  String? get icon2;
   @override
-  int? get stock;
+  String? get icon;
   @override
-  String? get brand;
+  @JsonKey(name: 'active_icon')
+  String? get activeIcon;
   @override
-  String? get category;
-  @override
-  String? get thumbnail;
-  @override
-  List<String>? get images;
+  bool? get active;
   @override
   @JsonKey(ignore: true)
-  _$$_ProductsModelCopyWith<_$_ProductsModel> get copyWith =>
+  _$$_PropertyCategoryCopyWith<_$_PropertyCategory> get copyWith =>
       throw _privateConstructorUsedError;
 }

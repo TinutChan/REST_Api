@@ -4,21 +4,19 @@ part 'product_model.freezed.dart';
 part 'product_model.g.dart';
 
 @freezed
-class ProductsModel with _$ProductsModel {
-  factory ProductsModel({
+class PropertyCategory with _$PropertyCategory {
+  factory PropertyCategory({
     int? id,
-    String? title,
-    String? description,
-    double? price,
-    double? discountPercentage,
-    double? rating,
-    int? stock,
-    String? brand,
-    String? category,
-    String? thumbnail,
-    List<String>? images,
-  }) = _ProductsModel;
+    String? key,
+    String? type,
+    String? label,
+    String? route,
+    String? icon2,
+    String? icon,
+    @JsonKey(name: 'active_icon') String? activeIcon,
+    bool? active,
+  }) = _PropertyCategory;
 
-  factory ProductsModel.fromJson(Map<String, dynamic> json) =>
-      _$ProductsModelFromJson(json);
+  factory PropertyCategory.fromJson(Map<String, dynamic> json) =>
+      _$PropertyCategoryFromJson(json);
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_textfield.dart';
+import 'controller/login_controller.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,6 +14,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final loginController = Get.put(LoginController());
+
   bool visitable = true;
 
   @override
@@ -32,18 +36,28 @@ class _LoginScreenState extends State<LoginScreen> {
             Container(
               padding: const EdgeInsets.all(8.0),
               child: CustomTextFiled(
+                function: (value) {
+                  loginController.loginEmailController.value = value;
+                  debugPrint(
+                      '=========Value ${loginController.loginEmailController.value}');
+                },
+                // userController: ,
                 obscureText: false,
                 inputKeyboard: TextInputType.emailAddress,
-                icons: Icon(
-                  Icons.mail,
-                  color: const Color(0xff868686).withOpacity(0.5),
-                ),
+                // icons: Icon(
+                //   Icons.mail,
+                //   color: const Color(0xff868686).withOpacity(0.5),
+                // ),
                 hinttext: 'Email',
               ),
             ),
             Container(
               padding: const EdgeInsets.all(8.0),
               child: CustomTextFiled(
+                function: (value) {
+                  loginController.loginPasswordController.value = value;
+                  debugPrint('============PassValue $value');
+                },
                 obscureText: visitable,
                 inputKeyboard: TextInputType.visiblePassword,
                 icons: Icon(
@@ -80,6 +94,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   context.push('/homescreen');
                 },
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                loginController.getLogin();
+              },
+              child: const Text('Press'),
             ),
           ],
         ),
