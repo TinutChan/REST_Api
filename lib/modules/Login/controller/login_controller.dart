@@ -9,7 +9,7 @@ class LoginController extends GetxController {
   final loginPasswordController = ''.obs;
   Future getLogin() async {
     try {
-      debugPrint('===============GetLoging');
+      debugPrint('===========');
       String url =
           'https://pre-rentkh.z1central.com/api/mobile/v1/auth-customer/login';
 
@@ -28,6 +28,7 @@ class LoginController extends GetxController {
       );
       var responseJson = json.decode(response.body);
       String name = responseJson['access_token'];
+
       debugPrint('==============body $name');
     } catch (e) {
       debugPrint('==============catch $e');

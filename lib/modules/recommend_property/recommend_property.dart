@@ -27,14 +27,19 @@ class RecommendPropertyScreen extends StatelessWidget {
                       .merge(const TextStyle(color: Colors.black)),
                 ),
               ),
-              Center(
-                child: IconButton(
-                  onPressed: () {
-                    debugPrint('=============');
-                    recommendProductsController.getRecommendProperty();
-                  },
-                  icon: const Icon(Icons.refresh),
-                ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      debugPrint(
+                          '============= ${recommendProductsController.listRecommendproperties.length}');
+                      recommendProductsController.getRecommendProperty();
+                    },
+                    icon: const Icon(Icons.refresh),
+                  ),
+                  Text(
+                      '${recommendProductsController.listRecommendproperties.length}'),
+                ],
               ),
               Expanded(
                 child: ListView.builder(

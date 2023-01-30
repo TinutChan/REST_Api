@@ -23,10 +23,10 @@ class RecommendPropertyController extends GetxController {
       }).then((response) {
         debugPrint('=====================${response.body}');
         var responseJson = json.decode(response.body)['data'];
-        // debugPrint('===============Json=========$responseJson');
+        debugPrint('===============Json=========$responseJson');
         responseJson.map((response) {
           recommendProperty.value = RecommendProperty.fromJson(response);
-          // debugPrint('================Respond=======$recommendProperty');
+          debugPrint('================Respond=======$recommendProperty');
           listRecommendproperties.add(recommendProperty.value);
           // debugPrint(
           //     '================List Recommend=======$listRecommendproperties');

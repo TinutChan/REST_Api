@@ -12,6 +12,7 @@ class CustomTextFiled extends StatelessWidget {
     this.userController,
     required this.obscureText,
     this.boxborders,
+    required this.validators,
   });
 
   final bool? obscureText;
@@ -23,6 +24,7 @@ class CustomTextFiled extends StatelessWidget {
   final TextInputType? inputKeyboard;
   final TextEditingController? userController;
   final BoxBorder? boxborders;
+  final String? Function(String?)? validators;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,9 @@ class CustomTextFiled extends StatelessWidget {
           border: Border.all(width: 1, color: Colors.black),
           color: const Color.fromRGBO(242, 242, 242, 1),
           borderRadius: BorderRadius.circular(8.0)),
-      child: TextField(
+      child: TextFormField(
+        
+        validator: validators,
         obscureText: obscureText!,
         keyboardType: inputKeyboard,
         controller: userController,

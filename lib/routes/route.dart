@@ -4,6 +4,7 @@ import 'package:app2022/modules/recommend_property/recommend_property.dart';
 import 'package:go_router/go_router.dart';
 
 import '../modules/home/homescreen.dart';
+import '../modules/movies/movies_screen.dart';
 
 final GoRouter router = GoRouter(
   routes: [
@@ -30,6 +31,12 @@ final GoRouter router = GoRouter(
       builder: (context, state) {
         return RecommendPropertyScreen();
       },
-    )
+    ),
+    GoRoute(
+      path: '/moviesscreen',
+      builder: (context, state) {
+        return MoviesScreen();
+      },
+    ),
   ],
 );

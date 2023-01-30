@@ -55,6 +55,15 @@ class HomeScreen extends StatelessWidget {
               },
               child: const Text('Recommed Property'),
             ),
+            GestureDetector(
+              onTap: () {
+                context.push('/moviesscreen');
+              },
+              child: const Text(
+                'Popular Movies',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
           ],
         ),
       ),
